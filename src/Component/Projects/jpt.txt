@@ -1,0 +1,22 @@
+        {transition((style,item)=> item && <animated.div style={style} className='projects'>
+        {trail.map(({ sc, x, y, skewX, ...props }, i) => (
+              <animated.div
+                key={i}
+                style={{
+                  ...props,
+                  transform: to(
+                    [sc, x, y, skewX],
+                    (sc, x, y, skewX) =>
+                      `scale(${sc}) translate(${x}, ${y}) skewX(${skewX}deg)`
+                  ),
+                  height: "200px",
+                  width: "100px",
+                  backgroundColor: "pink"
+                }}
+              >
+                {projectList[i].projectName}
+       </animated.div>
+            ))}
+
+
+        </animated.div>)}

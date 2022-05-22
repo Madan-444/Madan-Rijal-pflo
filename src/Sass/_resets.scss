@@ -1,0 +1,13 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body, #root, .App {
+  background-repeat: no-repeat;
+  background-color: #000000;
+  height: 100vh;
+  // background-image: linear-gradient(15deg, #0e0b0b 0%, #1f3233 74%,rgba(48, 39, 39, 0.692) 97%);
+}

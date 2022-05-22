@@ -1,0 +1,66 @@
+.skill {
+    border-radius: 20px;
+    // height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+    background-color: color("color-text");
+    height: 75vh;
+    &--container {
+        display: flex;
+        width: 100%;
+        padding: 20px;
+        overflow-y: hidden;
+        .chart--container {
+            width: 35%;
+        }
+        .skill--showcase {
+            width: 65%;
+            // border: 1px solid rgb(216, 205, 216);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            
+            &__items {
+                border-radius: 27px;
+                background: #e0e0e0;
+                box-shadow: inset 10px 10px 20px #bebebe,
+                            inset -10px -10px 20px #ffffff;
+                border-radius: 20px;
+                position: relative;
+                height: 30px !important;
+                font-size: 0;
+                // background-color: rgb(42, 42, 39);
+                & div {
+                    position: absolute;
+                    top: 50%;
+                    left: 5px;
+                    width: calc(var(--w) * 1%);
+                    height: 90%;
+                    background-image: linear-gradient(15deg, #a13939 0%, #1f3233 54%,rgba(55, 24, 125, 0.692) 97%);
+                    border-radius: 27px;
+                    box-shadow:  11px 11px 29px #cecece,
+                    -11px -11px 29px #f2f2f2;
+                    animation: skillAnimation  0.5s ease-in-out 1 forwards;
+                    transform-origin: left;
+                    
+                    transform: scaleX(0) translateY(-50%);
+                    animation-delay: calc(var(--i) * 0.6s);
+                }
+
+            }
+        }
+    }
+
+}
+@keyframes skillAnimation {
+    0% {
+        transform: scaleX(0) translateY(-50%);
+    }
+    100% {
+        transform: scaleX(1) translateY(-50%);
+    }
+}
